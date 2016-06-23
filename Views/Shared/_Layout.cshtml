@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/responsiveslides.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/responsiveslides.min.js"></script>
+    <script>
+		    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 2500,
+			        speed: 600
+			      });
+			});
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <!---start-wrap---->
+    <!---start-header---->
+    <br />
+    <div class="header">
+        <div class="wrap">
+            <!---start-logo---->
+            <div class="logo">
+                <a href="index.html"><img src="~/Images/logo.png" title="logo" /></a>
+            </div>
+            <!---End-logo---->
+            <!---start-top-nav---->
+            <div class="top-nav">
+                <ul>
+                    <li>@Html.ActionLink("Index", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    <li>@Html.ActionLink("Plans", "Plans", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                   
+                </ul>
+            </div>
+            <div class="clear"> </div>
+            <!---End-top-nav---->
+        </div>
+        <!---End-header---->
+    </div>
+    <!---End-wrap---->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!---start-footer---->
+        <div class="footer">
+            <div class="wrap">
+                <div class="footer-grids">
+                    <div class="footer-grid">
+                        <h3>EXTRAS</h3>
+                        <p>Special features</p>
+                    </div>
+                    <div class="footer-grid">
+                        <h3>RECENT POSTS</h3>
+                        <ul>
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Barcelona</a></li>
+                            <li><a href="#">Milan</a></li>
+                            <li><a href="#">Amsterdam</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid">
+                        <h3>USEFUL INFO</h3>
+                        <ul>
+                            <li><a href="#">Popular Locations</a></li>
+                            <li><a href="#">Best reviewed</a></li>
+                            <li><a href="#">New offers</a></li>
+                            <li><a href="#">New trips</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid footer-lastgrid">
+                        <h3>CONTACT US</h3>
+                        <p>Feel free to contact our representatives.</p>
+                        <div class="footer-grid-address">
+                            <p>Tel. +923244196872</p>
+                            <p>Fax: 1234 568</p>
+                            <p>Email:<a class="email-link" href="#">bsef13m506@pucit.edu.pk</a></p>
+                        </div>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        </div>
+        <!---End-footer---->
+    </div>
+    <div class="clear"> </div>
+    <div class="copy-right">
+        <p>Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
